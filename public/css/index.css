@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playwrite+BE+WAL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Petit+Formal+Script&family=Playwrite+BE+WAL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Monsieur+La+Doulaise&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Petit+Formal+Script&family=Playwrite+BE+WAL:wght@100..400&display=swap');
+
+
+:root{
+--monsieur: "Monsieur La Doulaise", cursive;
+--edu: "Edu AU VIC WA NT Hand", cursive;
+--arizonia: "Arizonia", cursive;
+--b612:"B612", sans-serif;
+--moradoC:  rgb(29, 10, 31);
+--moradoM: rgb(28, 5, 31);
+--moradoOs: rgb(41, 18, 43);
+--white: rgb(237, 232, 238);
+}
+
+body{
+    height: 100vh;
+    margin: 0 5px 0 5px;
+    padding: 0;
+    background-image: linear-gradient(
+    rgb(238, 232, 240),
+    rgb(79, 172, 248),
+    rgb(117, 199, 253),
+    rgb(190, 133, 243),
+    rgb(252, 176, 223));
+
+}
+
+
+.encabezado{
+    height: 5%;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.miLog{
+    height: 80px;   
+    margin: 15px;
+    
+}
+
+
+.navegadores {
+    font-family: var(--edu);
+    font-size: 10px;
+    list-style-type: none;
+    margin: 35px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.navegadores li {
+    margin-right: 15px;
+}
+
+.navegadores button {
+    height: 35px;
+    width: 120px;
+    background-color: #290c35;
+    color: #fcbdee;
+    border: 30px;
+    border-radius: 30px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navegadores button:hover {
+    background-color:#d44be0;
+}
+
+
+section{
+    height: 40%;
+    width: 95%;
+    margin:  100px 10px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    column-gap: 60px;
+}
+
+.hidden { visibility: hidden; }
+
+footer {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+
+
+.socialIcons a {
+    margin: 0 15px; /* Ajusta el espacio entre íconos */
+    font-size: 30px;
+    color: var(--moradoM);
+    transition: color 0.3s ease-in-out; /* Agrega una transición suave */
+}
+
+.socialIcons a:hover {
+    color: rgb(9, 128, 226); /* Cambia el color al pasar el ratón */
+    text-decoration: none; /* Asegura que no haya subrayado */
+}
+
+.socialIcons {
+    display: flex; /* Alinea los íconos horizontalmente */
+    justify-content: center; /* Centra los íconos */
+    margin: 20px 0; /* Ajusta el margen superior e inferior */
+}
+
+h1{
+    font-size: 70px;
+    color: var(--moradoOs);
+    font-family: var(--arizonia);
+    transition: background-color 0.3s;
+
+}
+h1:hover {
+    color: #d44be0;
+}
+
+    
+
+
+h3{
+    font-size: 35px;
+    color: var(--moradoC);
+    font-family: var(--edu);
+}
+p{
+    color: var(--moradoC);
+    font-family: var(--edu);
+    font-size: 20px;
+    
+}
+
+.miFoto {
+    display: inline;
+    width: 350px; 
+    height: 350px; 
+    border-radius: 50% / 50%; 
+    filter: drop-shadow(0 0 30px rgb(0, 0, 0 ));
+}
+
+
+.corazon{
+    height: 80%;
+}
+
+.ultimaLinea{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 0%;
+    padding: 0;
+    font-family: var(--b612);
+}
+
+/* Estilo general para la sección del formulario */
+.formulario {
+    height: 60%;
+    width: 60% ;
+    margin: 5% 20px 10px 10px;
+
+    display: flex;
+    justify-content: center;
+    background-color: #f814ed;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(250, 248, 249, 0.1);
+    font-family:var(--b612);
+}
+
+/* Estilo del encabezado */
+.contactame {
+    font-size: 2em;
+    color: #faf3f3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos de etiquetas y campos de entrada */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #c0b9b9;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #f1e7e7;
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #58317c;
+    outline: none;
+}
+
+/* Contenedor del botón para alinearlo con los campos */
+form #contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo del botón de envío */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #531d46;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #810e85;
+}
