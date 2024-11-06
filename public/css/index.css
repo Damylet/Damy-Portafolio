@@ -163,81 +163,42 @@ p{
     column-gap: 10px;
     margin-top: 0%;
     padding: 0;
-    font-family: var(--b612);
+    font-family: var(--edu);
+    font-size: 10px;
 }
+.contactame{
+    margin: 0;
+    margin: 5%  35%  0 35%;
+    font-size: 90px;
+    color: var(--moradoOs);
+    font-family: var(--arizonia);
+    transition: background-color 0.3s;
 
-/* Estilo general para la sección del formulario */
+}
+.contactame:hover {
+    color: #d44be0;
+
+}
+/* Estilo para la sección del formulario */
 .formulario {
-    height: 60%;
-    width: 60% ;
-    margin: 5% 20px 10px 10px;
-
-    display: flex;
-    justify-content: center;
-    background-color: #f814ed;
+    height: 46%;
+    max-width: 70%;
+    margin: 0%  15%  0 15%;
+    padding: 1rem;
+    background-image: linear-gradient(
+        rgb(252, 176, 223),
+        rgb(190, 133, 243),
+        rgb(117, 199, 253),
+        rgb(79, 172, 248),
+        rgb(238, 232, 240));
+        
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(250, 248, 249, 0.1);
-    font-family:var(--b612);
-}
-
-/* Estilo del encabezado */
-.contactame {
-    font-size: 2em;
-    color: #faf3f3;
+    filter: drop-shadow(0 0 10px rgb(54, 38, 53));
     text-align: center;
-    margin-bottom: 20px;
-}
+    
+  }
 
-/* Estilos de etiquetas y campos de entrada */
-label {
+ form{
     display: block;
-    margin-bottom: 5px;
-    color: #c0b9b9;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 1em;
-    color: #f1e7e7;
-    resize: vertical;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #58317c;
-    outline: none;
-}
-
-/* Contenedor del botón para alinearlo con los campos */
-form #contactForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Estilo del botón de envío */
-button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #531d46;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
-}
-
-button[type="submit"]:hover {
-    background-color: #810e85;
-}
+    font-family: var(--edu);
+ }

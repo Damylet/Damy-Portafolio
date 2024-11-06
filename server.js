@@ -1,23 +1,34 @@
 const express = require('express');
-const app = express();
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 const path = require('path');
 
-app.use(express.static('public'));
+const app = express();
 
+// Motor de plantillas
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// analiza datos del cuerpo de las solicitudes
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Ruta
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.render('index'); 
 });
 
 app.get('/proyectos', (req, res) => {
-  res.sendFile(path.join(__dirname, 'proyectos.html'));
+  res.render('proyectos'); 
 });
 
 app.get('/habilidades', (req, res) => {
-  res.sendFile(path.join(__dirname, 'habilidades.html'));
+  res.render('habilidades'); 
 });
 
 app.get('/contacto', (req, res) => {
-  res.sendFile(path.join(__dirname, 'contacto.html'));
+  res.render('contacto'); 
 });
 
 const PORT = process.env.PORT || 3000;
