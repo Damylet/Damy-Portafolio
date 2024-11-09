@@ -1,12 +1,18 @@
-
-function typeWriter(element, text, delay) {
+function typeWriter(element, text, delay, callback) {
     element.innerHTML = '';
     let i = 0;
     function typing() {
         if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
+            if (text.charAt(i) === '.') {
+                element.innerHTML += '.<br>'; // Añadir salto de línea después del punto
+                i++;
+            } else {
+                element.innerHTML += text.charAt(i);
+                i++;
+            }
             setTimeout(typing, delay);
+        } else if (callback) {
+            callback();
         }
     }
     typing();
@@ -16,10 +22,9 @@ window.onload = function() {
     const titulo = document.getElementById('titulo');
     const descripcion = document.getElementById('descripcion');
     
-    typeWriter(titulo, 'Damylet Mirena', 100); // Introduce el texto del h3
-
-    setTimeout(() => {
+    titulo.classList.remove('hidden');
+    typeWriter(titulo, 'Hola soy, Damylet Mirena', 100, () => {
         descripcion.classList.remove('hidden');
-        typeWriter(descripcion, descripcion.innerText, 50); // Introduce el texto del p
-    }, 2000); // Espera 2 segundos antes de comenzar con el párrafo
+        typeWriter(descripcion, 'Programador Full Stack con conocimientos en desarrollo web y aplicaciones. Poseo habilidades en HTML / CSS / JavaScript / Nodejs / Java / Spring Boot. Lo que me permite crear sitios web escalables y robustos. Me apasiona aumentar mis conocimientos y habilidades.', 50);
+    });
 }

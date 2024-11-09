@@ -27,7 +27,7 @@ body{
     rgb(252, 176, 223));
 
 }
-
+/* HEADER*/
 
 .encabezado{
     height: 5%;
@@ -64,7 +64,7 @@ body{
     height: 35px;
     width: 120px;
     background-color: #290c35;
-    color: #fcbdee;
+    color: #faf5f9;
     border: 30px;
     border-radius: 30px;
     padding: 10px;
@@ -74,48 +74,6 @@ body{
 
 .navegadores button:hover {
     background-color:#d44be0;
-}
-
-
-section{
-    height: 40%;
-    width: 95%;
-    margin:  100px 10px;
-    padding: 0 50px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    column-gap: 60px;
-}
-
-.hidden { visibility: hidden; }
-
-footer {
-    height: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-
-
-
-.socialIcons a {
-    margin: 0 15px; /* Ajusta el espacio entre íconos */
-    font-size: 30px;
-    color: var(--moradoM);
-    transition: color 0.3s ease-in-out; /* Agrega una transición suave */
-}
-
-.socialIcons a:hover {
-    color: rgb(9, 128, 226); /* Cambia el color al pasar el ratón */
-    text-decoration: none; /* Asegura que no haya subrayado */
-}
-
-.socialIcons {
-    display: flex; /* Alinea los íconos horizontalmente */
-    justify-content: center; /* Centra los íconos */
-    margin: 20px 0; /* Ajusta el margen superior e inferior */
 }
 
 h1{
@@ -129,29 +87,82 @@ h1:hover {
     color: #d44be0;
 }
 
-    
 
+
+section{
+    height: 40%;
+    width: 95%;
+    margin:  100px 10px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    column-gap: 60px;
+}
+
+/* PORTADA */
+
+.contenido{
+     display: grid; 
+        grid-template-columns: 1fr 2fr; 
+        gap: 20px;  
+        align-items: center;
+}
+
+.texto-1 { 
+    display: grid; 
+    grid-template-rows: repeat(4, auto); 
+    padding: 20px;
+}
 
 h3{
     font-size: 35px;
     color: var(--moradoC);
     font-family: var(--edu);
+
 }
+
 p{
     color: var(--moradoC);
     font-family: var(--edu);
     font-size: 20px;
     
+    
 }
 
 .miFoto {
     display: inline;
-    width: 350px; 
+    width: 300px; 
     height: 350px; 
     border-radius: 50% / 50%; 
     filter: drop-shadow(0 0 30px rgb(0, 0, 0 ));
 }
 
+/* FOOTER */
+footer {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.socialIcons a {
+    margin: 0 15px; 
+    font-size: 30px;
+    color: var(--moradoM);
+    transition: color 0.3s ease-in-out; 
+}
+
+.socialIcons a:hover {
+    color: rgb(9, 128, 226); 
+    text-decoration: none; 
+}
+
+.socialIcons {
+    display: flex; 
+    justify-content: center; 
+    margin: 20px 0; 
+}
 
 .corazon{
     height: 80%;
@@ -166,8 +177,71 @@ p{
     font-family: var(--edu);
     font-size: 10px;
 }
+
+/* PAGINA DE PROYECTOS */
+.proyectos{
+    
+    margin: 5%  35%  0 35%;
+    font-size: 90px;
+    color: var(--moradoOs);
+    font-family: var(--arizonia);
+    transition: background-color 0.3s;
+
+}
+.proyectos:hover {
+    color: #d44be0;
+
+}
+/* PAGINA DE HABILIDADES */
+.habilidades{
+    
+    margin: 5%  35%  0 35%;
+    font-size: 90px;
+    color: var(--moradoOs);
+    font-family: var(--arizonia);
+    transition: background-color 0.3s;
+
+}
+.habilidades:hover {
+    color: #d44be0;
+
+}
+
+
+.habilidades-container {
+    width: 80%;
+    margin: 0 50% 0 10%;
+    padding: 10px  0  0  10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    
+    background-color: hsla(300, 39%, 21%, 0.2);
+    border-radius: 15px;
+}
+
+.habilidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.habilidad img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease; /* Duración y tipo de transición */ } 
+
+    .habilidad img:hover {
+         transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    }
+
+/* PAGINA DE CONTACTO */
+
 .contactame{
-    margin: 0;
+    
     margin: 5%  35%  0 35%;
     font-size: 90px;
     color: var(--moradoOs);
@@ -179,12 +253,11 @@ p{
     color: #d44be0;
 
 }
-/* Estilo para la sección del formulario */
 .formulario {
     height: 46%;
     max-width: 70%;
     margin: 0%  15%  0 15%;
-    padding: 1rem;
+    padding: 5px  0  0  15px;
     background-image: linear-gradient(
         rgb(252, 176, 223),
         rgb(190, 133, 243),
@@ -194,11 +267,74 @@ p{
         
     border-radius: 10px;
     filter: drop-shadow(0 0 10px rgb(54, 38, 53));
-    text-align: center;
+    
     
   }
 
  form{
+    gap: 10px 30px;
     display: block;
     font-family: var(--edu);
  }
+
+ #contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em;
+    
+    
+   
+}
+.lineal{
+
+    width: 100%;
+    display: flex;
+    gap: 5%;
+    font-size: 0.8em;
+}
+
+.lineal input{
+    flex: 1;
+}
+
+
+
+ input{
+    width: 300px;
+    margin: 5px  0 20px 0px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #e4eefa;
+    outline: none;
+}
+
+  textarea {
+    width: 650px;
+    height: 150px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    background-color: #e4eefa;
+}
+
+
+button[type="submit"] {
+    margin: 10px 0 0 0;
+    padding: 0.3em 1em;
+    background-color:var(--moradoM);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
