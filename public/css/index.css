@@ -15,41 +15,39 @@
 --white: rgb(237, 232, 238);
 }
 
+
+
 body{
     height: 100vh;
     margin: 0 5px 0 5px;
     padding: 0;
     background-image: linear-gradient(
-    rgb(238, 232, 240),
-    rgb(79, 172, 248),
-    rgb(117, 199, 253),
-    rgb(190, 133, 243),
-    rgb(252, 176, 223));
+    rgb(242, 212, 252),
+    rgb(162, 209, 248),
+    rgb(144, 178, 201),
+    rgb(199, 178, 218),
+    rgb(226, 185, 210));
 
 }
 /* HEADER*/
 
 .encabezado{
     height: 5%;
-    margin: 5px;
+    margin: 0;
     display: flex;
     justify-content: space-around;
     
 }
-
-
 .miLog{
-    height: 80px;   
-    margin: 15px;
+    height: 70px;   
+    margin: 15px 150px 100px 5px;
     
 }
-
-
 .navegadores {
     font-family: var(--edu);
     font-size: 10px;
     list-style-type: none;
-    margin: 35px;
+    margin: 35px 0 150px  100px  ;
     padding: 0;
     display: flex;
     justify-content: flex-end;
@@ -57,7 +55,7 @@ body{
 }
 
 .navegadores li {
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .navegadores button {
@@ -77,6 +75,7 @@ body{
 }
 
 h1{
+    
     font-size: 70px;
     color: var(--moradoOs);
     font-family: var(--arizonia);
@@ -92,7 +91,7 @@ h1:hover {
 section{
     height: 40%;
     width: 95%;
-    margin:  100px 10px;
+    margin: 100px 10px;
     padding: 0 50px;
     display: flex;
     justify-content: center;
@@ -103,10 +102,11 @@ section{
 /* PORTADA */
 
 .contenido{
-     display: grid; 
-        grid-template-columns: 1fr 2fr; 
-        gap: 20px;  
-        align-items: center;
+    height: 46%;
+    display: grid; 
+    grid-template-columns: 1fr 2fr; 
+    gap: 20px;  
+    align-items: center;
 }
 
 .texto-1 { 
@@ -132,55 +132,16 @@ p{
 
 .miFoto {
     display: inline;
-    width: 300px; 
+    width: 280px; 
     height: 350px; 
     border-radius: 50% / 50%; 
     filter: drop-shadow(0 0 30px rgb(0, 0, 0 ));
 }
 
-/* FOOTER */
-footer {
-    height: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
 
-.socialIcons a {
-    margin: 0 15px; 
-    font-size: 30px;
-    color: var(--moradoM);
-    transition: color 0.3s ease-in-out; 
-}
-
-.socialIcons a:hover {
-    color: rgb(9, 128, 226); 
-    text-decoration: none; 
-}
-
-.socialIcons {
-    display: flex; 
-    justify-content: center; 
-    margin: 20px 0; 
-}
-
-.corazon{
-    height: 80%;
-}
-
-.ultimaLinea{
-    display: flex;
-    justify-content: center;
-    column-gap: 10px;
-    margin-top: 0%;
-    padding: 0;
-    font-family: var(--edu);
-    font-size: 10px;
-}
 
 /* PAGINA DE PROYECTOS */
 .proyectos{
-    
     margin: 5%  35%  0 35%;
     font-size: 90px;
     color: var(--moradoOs);
@@ -192,6 +153,31 @@ footer {
     color: #d44be0;
 
 }
+.contenedor-proyectos{
+    height: 50%;
+    margin: 0;
+    column-gap: 80px;
+
+}
+
+.imgEncriptadorMuñeco,.imgConversorMonedas , .imgLiteratura, .imgForo{
+    height: 150px;
+    width: 230px;
+    background-color: #091c33;
+    border-radius: 15px;
+
+}
+
+article a,
+ .descripcion1,
+ .descripcion2,
+ .descripcion3,
+ .descripcion4 {
+    font-size: 0.9em;
+    font-family: var(--edu);
+    margin-top: 5px;
+ }
+
 /* PAGINA DE HABILIDADES */
 .habilidades{
     
@@ -209,34 +195,41 @@ footer {
 
 
 .habilidades-container {
-    width: 80%;
-    margin: 0 50% 0 10%;
-    padding: 10px  0  0  10px;
+    height: 50%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 2em;
     
-    background-color: hsla(300, 39%, 21%, 0.2);
-    border-radius: 15px;
+    
+    
 }
-
-.habilidad {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 120px;
+.carrusel-container { 
+     overflow: hidden;
+     width: 200%;
+    
 }
-
-.habilidad img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 0.5em;
-    transition: transform 0.3s ease; /* Duración y tipo de transición */ } 
-
-    .habilidad img:hover {
-         transform: scale(1.2); /* Aumenta el tamaño al 120% */
+ .carrusel { 
+    display: flex; 
+    width: calc(100px * 12); 
+    animation: carruselScroll 20s linear infinite; 
+}
+ .carrusel img {
+     width: 150px; height: 150px; 
+     margin: 60px;
+    transition: transform 0.3s ease;;
     }
+
+    .carrusel img:hover {
+        transform: scale(1.2);
+    }
+      @keyframes carruselScroll {
+         0% { transform: translateX(0); } 
+         100% { transform: translateX(calc(-100px * 12));
+         }
+        }
+
+    
 
 /* PAGINA DE CONTACTO */
 
@@ -254,16 +247,16 @@ footer {
 
 }
 .formulario {
-    height: 46%;
+    height: 50%;
     max-width: 70%;
     margin: 0%  15%  0 15%;
     padding: 5px  0  0  15px;
     background-image: linear-gradient(
-        rgb(252, 176, 223),
-        rgb(190, 133, 243),
-        rgb(117, 199, 253),
-        rgb(79, 172, 248),
-        rgb(238, 232, 240));
+        rgb(250, 196, 229),
+        rgb(205, 161, 247),
+        rgb(176, 220, 250),
+        rgb(134, 199, 252),
+        rgb(239, 194, 253));
         
     border-radius: 10px;
     filter: drop-shadow(0 0 10px rgb(54, 38, 53));
@@ -338,3 +331,93 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+/* FOOTER */
+footer {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.socialIcons a {
+    margin: 0 20px 5px; 
+    font-size: 35px;
+    color: var(--moradoM);
+    transition: color 0.3s ease-in-out; 
+}
+
+.socialIcons a:hover {
+    color: rgb(9, 128, 226); 
+    text-decoration: none; 
+}
+
+.socialIcons {
+    display: flex; 
+    justify-content: center; 
+    
+    
+}
+
+.corazon{
+    height: 80%;
+}
+
+.ultimaLinea{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 0%;
+    font-size: 0.5em;
+    font-family: var(--edu);
+}
+.det{
+    font-size: 1.5em;
+    word-spacing: 8px;
+}
+
+
+@media (max-width: 768px){
+    body{
+        height: 100%;
+    }
+    ul .navegadores{
+        display: flex;
+    }
+
+    .contenido{
+        flex-direction: column;
+        height: 40%;
+        width: 100% ;
+        
+
+    }
+   
+}
+
+
+
+@media (max-width: 550px) {
+    boby{
+        height: 100vh;
+    }
+    .encabezado {
+        height: 10%;
+    }
+
+    .navegadores{
+        display: block;
+        margin-top: 5px;
+        column-gap: 5px;
+    }
+ .texto-1 {
+     max-width: 100%; 
+     padding: 10px; 
+     font-size: 1em; }
+.Presentacion { 
+    grid-template-rows: auto auto auto auto; /* Ajusta las filas para pantallas pequeñas */ } 
+ #titulo { 
+    font-size: 1.2em; }
+ #descripcion {
+     font-size: 1em; }
+ }
